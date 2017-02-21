@@ -2,6 +2,7 @@
   "name": "clay-list-filter",
   "version": "1.0.0",
   "description": "Listing filter for ClayDB",
+  "browser": "shim/browser",
   "main": "lib",
   "scripts": {
     "test": "node ./ci/test.js",
