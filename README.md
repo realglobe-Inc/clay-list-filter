@@ -101,6 +101,7 @@ Available functions
 
 | Signature | Description |
 | ---- | ----------- |
+| `filterArray(array, conditions) -> Object[]` | Filter array with condition |
 
 
 <!-- Section from "doc/guides/03.Functions.md.hbs" End -->
