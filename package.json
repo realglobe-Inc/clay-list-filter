@@ -1,6 +1,6 @@
 {
   "name": "clay-list-filter",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Listing filter for ClayDB",
   "browser": "shim/browser",
   "main": "lib",
@@ -41,8 +41,5 @@
   "engines": {
     "node": ">=6",
     "npm": ">=4"
-  },
-  "publishConfig": {
-    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }
