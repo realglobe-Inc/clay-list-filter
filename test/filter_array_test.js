@@ -35,6 +35,13 @@ describe('filter-array', function () {
       [ { name: null }, { name: null } ]
     )
   }))
+
+  it('Filter by ref', () => co(function * () {
+    deepEqual(
+      filterArray([ { $ref: 'Org#1' }, { $ref: 'Org#2' } ], { $ref: 'Org#1' })
+        [ { $ref: 'Org#1' } ]
+    )
+  }))
 })
 
 /* global describe, before, after, it */
