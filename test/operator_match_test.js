@@ -31,6 +31,8 @@ describe('operator-match', function () {
     ok(operatorMatch('$notIn', [ 1, 2, 3 ], 5))
     ok(operatorMatch('$between', [ 5, 15 ], 10))
     ok(operatorMatch('$notBetween', [ 5, 15 ], 100))
+    ok(operatorMatch('$like', 'fo%', 'foo'))
+    ok(operatorMatch('$notLike', 'fo%', 'hoge'))
   }))
 })
 
