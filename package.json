@@ -1,6 +1,6 @@
 {
   "name": "clay-list-filter",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Listing filter for ClayDB",
   "browser": "shim/browser",
   "main": "lib",
