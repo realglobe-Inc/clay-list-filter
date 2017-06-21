@@ -34,6 +34,21 @@ describe('filter-array', function () {
       filterArray([ { name: 'foo' }, { name: null }, { name: null } ], { name: null }),
       [ { name: null }, { name: null } ]
     )
+
+    deepEqual(
+      filterArray([ { v: 100 }, { v: 300 } ], { v: { $in: [ 300, 500 ] } }),
+      [ { v: 300 } ]
+    )
+
+    deepEqual(
+      filterArray([ { v: 100 }, { v: 300 } ], { v: { $between: [ 150, 350 ] } }),
+      [ { v: 300 } ]
+    )
+
+    deepEqual(
+      filterArray([ { v: 100 }, { v: 300 } ], { v: { $notBetween: [ 150, 350 ] } }),
+      [ { v: 100 } ]
+    )
   }))
 
   it('Filter by ref', () => co(function * () {
