@@ -22,10 +22,12 @@
     "url": "https://github.com/realglobe-Inc/clay-list-filter/issues"
   },
   "homepage": "https://github.com/realglobe-Inc/clay-list-filter#readme",
-  "dependencies": {},
+  "dependencies": {
+    "clay-id": "^3.0.2"
+  },
   "devDependencies": {
     "ababel": "^4.0.6",
-    "amocha": "^4.0.0",
+    "amocha": "^5.0.0",
     "ape-doc": "^2.0.4",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
@@ -39,6 +41,6 @@
   },
   "engines": {
     "node": ">=8",
-    "npm": ">=4"
+    "npm": ">=5"
   }
 }
