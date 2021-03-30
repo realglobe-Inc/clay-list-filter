@@ -54,6 +54,21 @@ describe('filter-array', function () {
       filterArray([{v: 100}, {v: 300}], {$or: [{v: {$notBetween: [150, 350]}}]}),
       [{v: 100}]
     )
+
+    deepEqual(
+      filterArray([{v: 100}, {v: 300}, {v: 500}, {v: 700}], {v: { $between: [0, 500] }, $or: [{v: { $ne: 300 }}]}),
+      [{v: 100}, {v: 500}]
+    )
+
+    deepEqual(
+      filterArray([{v: 100}, {v: 300}, {v: 500}, {v: 700}], {v: { $between: [0, 500] }, $or: [{v: { $ne: 300 }}, {v: { $ne: 500 }}]}),
+      [{v: 100}, {v: 300}, {v: 500}]
+    )
+
+    deepEqual(
+      filterArray([{v: 100}, {v: 300}, {v: 500}, {v: 700}], {v: { $between: [0, 500] }, $and: [{v: { $ne: 300 }}, {v: { $ne: 500 }}]}),
+      [{v: 100}]
+    )
   }))
 
   it('Filter by ref', () => co(function * () {
